@@ -26,6 +26,20 @@ public class Complex
         im = 0;
     }
     /**
+     * Returns real component of complex number
+     */
+    public double re()
+    {
+        return re;
+    }
+    /**
+     * Returns imaginary component of complex numebr
+     */
+    public double im()
+    {
+        return im;
+    }
+    /**
      * Returns absolute value (magnitude) of complex number
      */
     public double abs()
@@ -81,11 +95,40 @@ public class Complex
         return new Complex(re*z.re-im*z.im,re*z.im+z.re*im);
     }
     /**
+     * Multiplies complex number by real number
+     */
+    public Complex multiply(double n)
+    {
+        return new Complex(n*re,n*im);
+    }
+    /**
      * Divides complex number by complex number z
      */
     public Complex divide(Complex z)
     {
         return new Complex((re*z.re+im*z.im)/(z.re*z.re+z.im*z.im),(z.re*im-re*z.im)/(z.re*z.re+z.im*z.im));
+    }
+    /**
+     * Divides complex number by real number
+     */
+    public Complex divide(double n)
+    {
+        return new Complex(re/n,im/n);
+    }
+    /**
+     * Returns exponent of a complex number to a real power
+     */
+    public Complex pow(double exp)
+    {
+        return new Complex(Math.pow(this.abs(),exp)*Math.cos(exp*this.arg()),
+        Math.pow(this.abs(),exp)*Math.sin(exp*this.arg()));
+    }
+    /**
+     * Returns e raised to the power of complex number
+     */
+    public Complex exp()
+    {
+        return new Complex(Math.pow(Math.E,re)*Math.cos(im),Math.pow(Math.E,re)*Math.sin(im));
     }
     /**
      * Processes complex number as String
