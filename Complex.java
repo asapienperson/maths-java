@@ -24,6 +24,14 @@ public class Complex
         im = 0;
     }
     /**
+     * Constructor for complex numbers, copying value of other complex number
+     */
+    public Complex(Complex z)
+    {
+        re = z.re;
+        im = z.im;
+    }
+    /**
      * Returns real component of complex number
      */
     public double re()
@@ -31,11 +39,41 @@ public class Complex
         return re;
     }
     /**
-     * Returns imaginary component of complex numebr
+     * Returns imaginary component of complex number
      */
     public double im()
     {
         return im;
+    }
+    /**
+     * Sets real component of complex number
+     */
+    public void setRe(double real)
+    {
+        re = real;
+    }
+    /**
+     * Sets imaginary component of complex number
+     */
+    public void setIm(double imag)
+    {
+        im = imag;
+    }
+    /**
+     * Sets complex number to another value
+     */
+    public void set(double real, double imag)
+    {
+        re = real;
+        im = imag;
+    }
+    /**
+     * Sets complex number to value of another complex number
+     */
+    public void set(Complex z)
+    {
+        re = z.re;
+        im = z.im;
     }
     /**
      * Returns absolute value (magnitude) of complex number
@@ -130,10 +168,21 @@ public class Complex
         return (this.multiply(base.log())).exp();
     }
     /**
+     * Checks if two complex numbers are equivalent.
+     */
+    public boolean equals(Complex z)
+    {
+        if (re == z.re && im == z.im) return true;
+        else return false;
+    }
+    /**
      * Processes complex number as String
      */
     public String toString(Complex z)
     {
+        if (im >= 0)
         return (re + "+" + im + "i");
+        else
+        return (re + im + "i");
     }
 }
