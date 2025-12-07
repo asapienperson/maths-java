@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Complex
+comment0.text=\r\n\ Class\ representing\ complex\ numbers\ because\ bored\r\n
+comment1.params=real\ imag
+comment1.target=Complex(double,\ double)
+comment2.params=
+comment2.target=Complex()
+comment3.params=
+comment3.target=double\ abs()
+comment4.params=
+comment4.target=double\ arg()
+comment5.params=
+comment5.target=Complex\ conjugate()
+comment6.params=z
+comment6.target=Complex\ add(Complex)
+comment7.params=z
+comment7.target=Complex\ subtract(Complex)
+comment8.params=z
+comment8.target=Complex\ multiply(Complex)
+comment9.params=z
+comment9.target=Complex\ divide(Complex)
+numComments=10
