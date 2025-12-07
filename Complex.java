@@ -3,9 +3,7 @@
  * Class representing complex numbers because bored
  */
 public class Complex
-{
-    private double a, b, c, d;//variables to assist methods
-    
+{   
     //attributes
     private double re;
     private double im;
@@ -51,20 +49,7 @@ public class Complex
      */
     public double arg()
     {
-        if (re == 0)
-        {
-            if (im > 0) return Math.PI/2;
-            else if (im < 0) return (3*Math.PI/2);
-            else return 0;
-        }
-        else if (re>0)
-        {
-            a = Math.atan(im/re);
-            if (a<0) a+=(2*Math.PI);
-            return a;
-        }
-        else
-        return (Math.PI+Math.atan(im/re));
+        return (Math.atan2(im,re));
     }
     /**
      * Returns conjugate of complex number
@@ -129,6 +114,20 @@ public class Complex
     public Complex exp()
     {
         return new Complex(Math.pow(Math.E,re)*Math.cos(im),Math.pow(Math.E,re)*Math.sin(im));
+    }
+    /**
+     * Returns natural logarithm of complex number
+     */
+    public Complex log()
+    {
+        return new Complex(Math.log(this.abs()),this.arg());
+    }
+    /**
+     * Returns complex number raised to the power of complex number
+     */
+    public Complex expBase(Complex base)
+    {
+        return (this.multiply(base.log())).exp();
     }
     /**
      * Processes complex number as String
