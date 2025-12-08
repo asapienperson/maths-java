@@ -102,4 +102,34 @@ public class Vector2D
     {
         return new Vector2D(this.i-i,this.j-j);
     }
+    /**
+     * Returns vector multiplied by scalar
+     */
+    public Vector2D multiply(double a)
+    {
+        return new Vector2D(a*i,a*j);
+    }
+    /**
+     * Checks if vector is equal to another vector
+     */
+    public boolean equals(Vector2D v)
+    {
+        if (i == v.i && j == v.j) return true;
+        else return false;
+    }
+    /**
+     * Checks if vector is equal to another vector (given by components)
+     */
+    public boolean equals (double i, double j)
+    {
+        if (this.i == i && this.j == j) return true;
+        else return false;
+    }
+    /**
+     * Displays vector as a string
+     */
+    public String toString()
+    {
+        return ("⟨"+i+","+j+"⟩");
+    }
 }
