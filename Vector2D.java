@@ -126,6 +126,36 @@ public class Vector2D
         else return false;
     }
     /**
+     * Returns dot product of vector and another vector
+     */
+    public double dot(Vector2D v)
+    {
+        return (i*v.i+j*v.j);
+    }
+    /**
+     * Returns dot product of vector and another vector (given by components)
+     */
+    public double dot(double i, double j)
+    {
+        return (this.i*i+this.j*j);
+    }
+    /**
+     * Returns projection of vector onto another vector
+     */
+    public Vector2D proj(Vector2D v)
+    {
+        double a = this.dot(v)/v.dot(v);
+        return new Vector2D(a*v.i,a*v.j);
+    }
+    /**
+     * Returns projection of vector onto another vector (given by components)
+     */
+    public Vector2D proj(double i, double j)
+    {
+        double a = this.dot(i,j)/(i*i+j*j);
+        return new Vector2D(a*i,a*j);
+    }
+    /**
      * Displays vector as a string
      */
     public String toString()
