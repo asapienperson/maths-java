@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Vector3D
+comment0.text=\r\n\ Class\ that\ represents\ a\ 3D\ vector\ (with\ i,\ j,\ and\ k\ components)\r\n
+comment1.params=
+comment1.target=Vector3D()
+comment1.text=\r\n\ Constructor\ with\ no\ parameters\:\ sets\ all\ components\ to\ 0\r\n
+comment2.params=i\ j\ k
+comment2.target=Vector3D(double,\ double,\ double)
+comment2.text=\r\n\ Constructor\ with\ values\ as\ parameters\r\n
+comment3.params=v
+comment3.target=Vector3D(Vector3D)
+comment3.text=\r\n\ Constructor\ that\ copies\ another\ vector\r\n
+numComments=4

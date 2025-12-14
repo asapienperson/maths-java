@@ -1,4 +1,3 @@
-
 /**
  * Class that represents a 2D vector (with i and j components)
  */
